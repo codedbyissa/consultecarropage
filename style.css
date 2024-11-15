@@ -1,0 +1,377 @@
+:root {
+    --main-bg-color: #f0eee2;
+    --primary-color: #eb7c2d;
+}
+  
+*{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    margin: 1em 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 92%;
+}
+
+main >p {
+    font-size: .6em;
+}
+
+main >p a {
+    font-weight: 600;
+    color: #000;
+}
+
+header {
+    margin-top: 2em;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 1em;
+}
+
+.attention {
+    margin-top: 2em;
+    display: flex;
+}
+
+.attention p {
+    font-size: 1vw;
+}
+
+.attention h4 {
+    font-size: 1.2vw;
+}
+
+.attention figure {
+    width: 8em;
+    margin-right: 1em;
+}
+
+.attention .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header .container {
+    flex-direction: row;
+}
+
+header .brand {
+    display: flex;
+}
+
+.supplier figure {
+    width: 22em;
+}
+
+.brand figure {
+    width: 7em;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+}
+
+.plus {
+    margin: 15px 10px 0 0;
+}
+
+.plus h2 {
+    color: var(--primary-color);
+    text-align: end;
+}
+
+.plus p {
+    text-align: end;
+    font-size: 1.5em;
+}
+
+.supplier h3:last-child {
+    margin-top: .5em;
+}
+
+article {
+    width: 100%;
+}
+
+article>section {
+    width: 100%;
+    position: relative;
+    margin-bottom: 4em;
+}
+
+article>section .content {
+    width: 100%;
+    margin-bottom: 1.5em;
+}
+
+article>section .content:last-child {
+    margin-bottom: 0;
+}
+
+article>section .content>h3 {
+    position: relative;
+    flex-grow: 1;
+    margin: 0;
+    display: flex; 
+    align-items: center; 
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+article>section .content>h3::after {
+    content: '';
+    flex-grow: 1;
+    margin-left: 5px;
+    background: repeating-linear-gradient(
+        to right,
+        transparent 0,
+        transparent 2px,
+        var(--primary-color) 2px,
+        var(--primary-color) 6px
+    );
+    height: 2px;
+    display: block;
+}
+
+article>section::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1em;
+    border-radius: 10px;
+    background: var(--primary-color);
+    left: 0;
+    bottom: -2.5em;
+    z-index: 9;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    padding: 1.2em 0 0 .6em;
+}
+
+.data.row {
+    flex-direction: row;
+}
+
+.data .response {
+    margin-left: 6%;
+}
+
+.data p, .data h4 {
+    margin-bottom: 1em;
+}
+
+.data.row p, .data.row h4 {
+    white-space: nowrap;
+}
+
+.item>p, .item>h4 {
+    margin-bottom: 1em;
+    white-space: nowrap;
+}
+
+.data h4 {
+    margin-left: .3em;
+}
+
+.data .response h4 {
+    color: var(--primary-color);
+}
+
+#negative {
+    color: red;
+}
+
+.data >.item {
+    display: flex;
+}
+
+.data >.info {
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+.info h2 span, .info h3 span  {
+    color: var(--primary-color);
+}
+
+.info h2{
+    font-size: 1.5vw;
+}
+
+.info h3 {
+    font-size: 1.2vw;
+}
+
+.info p {
+    font-size: 1.1vw;
+}
+
+.exemple p {
+    font-weight: 600;
+}
+
+.data >.item.column {
+    flex-direction: column;
+}
+
+.data >.item.marked h4 {
+    color: var(--primary-color);
+}
+
+.item .levels  {
+    width: 30%;
+}
+
+.item .result h1 {
+    font-size: 8em;
+    color: var(--primary-color);
+}
+
+th {
+    text-align: start;
+    font-weight: 500;
+}
+
+td {
+    font-weight: 600;
+}
+
+.table.long th, .table.long td {
+    font-size: 10px;
+    word-wrap: break-word;
+    width: 25px;
+}
+
+.cBar h4, .cProgress h4 {
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.cBar p {
+    color: #465161;
+    font-weight: 600;
+    font-size: 1.2em;
+    position: relative;
+    left: 3%;
+    width: fit-content;
+}
+
+.bar {
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to right, #4caf50, #8bc34a, #ffeb3b, #ff9800, #f44336);
+    position: relative;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.level {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 40px solid #333;
+    top: 3em;
+    transform: translateY(-50%);
+    left: 0;
+    transition: left 0.3s ease;
+}
+
+.cProgress {
+    flex-direction: row;
+    align-items: center;
+}
+
+#progress-circle {
+    stroke: green;
+}
+
+.chart {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin-right: 1em;
+}
+
+.chart span {
+    position: absolute;
+    font-size: 60px;
+    font-weight: bold;
+    color: #ff7f0e;
+}
+
+.chart svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.progress-circle {
+    width: 100%;
+    position: relative;
+}
+
+circle {
+    fill: none;
+    stroke-width: 15;
+}
+
+.bg {
+    stroke: var(--primary-color);
+}
+
+.progress {
+    stroke: #00aa00;
+    stroke-linecap: round;
+    stroke-dasharray: 690.8;
+    stroke-dashoffset: 690.8;
+    transition: stroke-dashoffset 0.3s ease, stroke 0.3s ease;
+}
+
+footer {
+    display: flex;
+    margin: 4em 0;
+}
+
+footer figure {
+    width: 30%;
+}
+
+footer .info {
+    margin-left: .5em;
+    width: 70%;
+ }
+
+footer h3 {
+   text-align: justify;
+}
